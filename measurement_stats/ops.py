@@ -1,7 +1,7 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 import sys
 
@@ -34,7 +34,7 @@ def is_number(value):
     :return:
     """
 
-    return isinstance(value, (int, long, float))
+    return isinstance(value, (int, float))
 
 
 def linear_space(min_value=0, max_value=1.0, length=10, round_op=None):

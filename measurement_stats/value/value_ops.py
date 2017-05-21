@@ -1,7 +1,7 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 import math
 import sys
@@ -65,14 +65,14 @@ def least_significant_order(value):
 
     om = 0
 
-    if isinstance(value, (int, long)) or long(value) == value:
-        value = long(value)
+    if isinstance(value, int) or int(value) == value:
+        value = int(value)
 
         while om < 10000:
             om += 1
             magnitude = math.pow(10, -om)
             test = float(value) * magnitude
-            if long(test) != test:
+            if int(test) != test:
                 return om - 1
         return 0
 

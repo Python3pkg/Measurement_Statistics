@@ -1,7 +1,7 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 from measurement_stats import errors
 from measurement_stats import value
@@ -72,7 +72,7 @@ def create(measurements, uncertainties=None, kernel=None):
                 len(uncertainties)
             ))
 
-        zipper = zip(measurements, uncertainties)
+        zipper = list(zip(measurements, uncertainties))
         return Distribution(
             kernel=kernel,
             measurements=[ValueUncertainty(v, u) for v, u in zipper]
